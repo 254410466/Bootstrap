@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+
+    <!--引入-->
+    <link rel="stylesheet" href="css/css渲染.css" type="text/css" />
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="T2018210160+付亮/jquery/jquery-1.10.2.min.js"></script>
+      <script src="T2018210160+付亮/bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body data-spy="scroll" data-offset="0" data-target="#navscroll" style="overflow:auto;position:relative">
+	<div class="container-fluid">
+        <header>
+          <div class="row clearfix">
+            <div class="col-md-12 column body">
+                <div class="jumbotron" >
+                    <h1 class="text-center">
+                       茶奶
+                    </h1>
+                    <p class="text-left col-md-offset-3">
+                        不一样的配方，不一样的味道，
+                    </p>
+                    <p class="text-left col-md-offset-5">
+                        不一样的味道，不一样的体验，
+                    </p>
+                    <p class="text-left col-md-offset-7">
+                        而我们的目的就是给你带来不一样的体验！
+                    </p>
+                    <p class="text-center">
+                         <a class="btn btn-primary btn-large" href="#">开始体验</a>
+                    </p>
+                </div>
+                <nav class="navbar navbar-default navbar-inverse" role="navigation">
+                    <div class="navbar-header">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                             <span class="sr-only">Toggle navigation</span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                          </button>
+                          <a class="navbar-brand" href="#">茶奶</a>
+                    </div>
+                    <div class="collapse navbar-collapse row" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav col-md-4 col-lg-4 hidden-sm">
+                            <li class="active">
+                                 <a href="#">首页</a>
+                            </li>
+                            <li>
+                                 <a href="#"><i class="badge btn-danger">热</i>最新</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">热门饮品 
+                                    <strong class="caret"></strong>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                         <a href="#">丝滑奶茶
+                                            <span class="badge pull-right">42</span>
+                                         </a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">港市奶茶
+                                            <span class="badge pull-right">32</span>
+                                         </a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">玫瑰香芋奶茶
+                                            <span class="badge pull-right">40</span>
+                                         </a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">玫瑰西米露
+                                            <span class="badge pull-right">38</span>
+                                         </a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">蜜爽绿豆奶茶
+                                            <span class="badge pull-right">47</span>
+                                         </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form navbar-left col-md-7 col-xs-8 col-sm=2" role="search">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="submit" class="input-group-addon"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></label>
+                                    <input type="text" class="form-control" id="submit" placeholder="店铺搜索"/>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default">找一找</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right row col-md-3 col-xs-3 col-sm-4">
+                            <li>
+                                 <a href="#" data-toggle="modal" data-target="#login" id="#page1">登录</a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#new" id="#page1">注册</a>
+                           </li>
+                            <!--登录模态框-->
+                            <div id="login" class="modal" tabindex="-1">
+                                <!--窗口声明-->
+                                <div class="modal-dialog">
+                                <!--内容声明-->
+                                <div class="modal-content">
+                                <!-- 头部 -->
+                                    <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                    <h4 class="modal-title text-center">Login A User</h4>
+                                    </div>
+                                    <!-- 主体 -->
+                                    <div class="modal-body ">
+                                        <form action="#" role="form" class="form-horizontal" id="loginfrom">
+                                            <div class="form-group">
+                                                <label for="uname" class="col-md-2 col-lg-2 col-sm-2 control-label">用户名</label>
+                                                <div class="col-md-8">
+                                                <input type="text" class="form-control" id="uname" placeholder="请输入用户名">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="psw" class="col-md-2 control-label">密码</label>
+                                                <div class="col-md-8">
+                                                <input type="text" class="form-control" id="psw" placeholder="请输入密码">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- 注脚 -->
+                                    <div class="modal-footer">
+                                        <p class=" btn-success text-center">登录</p>
+                                        <p class=" btn-warning text-center col-md-6" data-toggle="modal" data-target="#new" id="#page1">还没有？ 立即注册</p>
+                                        <p class=" btn-danger text-center col-md-6" class="close" data-dismiss="modal">关闭</p>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+
+                                <!--我是分隔符-->
+
+                                    <!--注册模态框-->
+                                <div id="new" class="modal" tabindex="-1">
+                                    <!--窗口声明-->
+                                    <div class="modal-dialog">
+                                    <!--内容声明-->
+                                    <div class="modal-content">
+                                    <!-- 头部 -->
+                                        <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span>&times;</span>
+                                        </button>
+                                        <h4 class="modal-title text-center">Create A User</h4>
+                                        </div>
+                                        <!-- 主体 -->
+                                        <div class="modal-body ">
+                                            <form action="#" role="form" class="form-horizontal" id="newform">
+                                                <div class="form-group">
+                                                    <label for="uname" class="col-md-2 control-label">用户名</label>
+                                                    <div class="col-md-8">
+                                                    <input type="text" class="form-control" name="uname" id="uname" placeholder="请输入用户名">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="psw" class="col-md-2 control-label">密码</label>
+                                                    <div class="col-md-8">
+                                                    <input type="text" class="form-control" name="psw" id="psw" placeholder="请输入密码">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="phone" class="col-md-2 control-label">手机号</label>
+                                                    <div class="col-md-8">
+                                                    <input type="text" class="form-control" name="phone" maxlength="11" id="phone" placeholder="请填写手机号">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="email" class="col-md-2 control-label">邮箱</label>
+                                                    <div class="col-md-8">
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="请输入邮箱号">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- 注脚 -->
+                                        <div class="modal-footer">
+                                            <p class="newuser btn-success text-center">注册</p>
+                                            <p class=" btn-warning text-center col-md-6" data-toggle="modal" data-target="#login" id="#page1">已有账号？ 立即登录</p>
+                                            <p class=" btn-danger text-center col-md-6" class="close" data-dismiss="modal">关闭</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+
+                                    <!--下拉菜单-->
+                            <li class="dropdown">
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                         <a href="#">我的足迹
+                                            <i class="badge">暂无</i>
+                                         </a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li class="regionItem" data-stopPropagation="true">  <!--li的两个属性都是防止下拉菜单的回收-->
+                                         <a href="#" data-toggle="collapse" data-target="#collapseExample">我喜欢的
+                                             <i class="badge">！</i>
+                                         </a>
+                                    </li>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="well">
+                                          港市奶茶
+                                        </div>
+                                        <i class="divider"></i>
+                                        <div class="well">
+                                          玫瑰奶茶西米露
+                                        </div>
+                                    </div>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">成交订单价</a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">待成交订单</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div id="navscroll">
+                    <ul class="nav nav-pills">
+                        <li class="disabled">
+                            <a href="#">惊喜一夏</a>
+                        </li>
+                        <li class="active">
+                            <a href="#many">饮品推荐</a>
+                        </li>
+                        <li>
+                            <a href="#hot">店铺精选</a>
+                        </li>
+                        <li>
+                            <a href="#connect">店铺相关</a>
+                        </li>
+                        <li>
+                            <a href="#footer">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+          </div>
+        </div>
+    </header><br>
+    <main>
+        <div id="many">
+            <p class="btn btn-default disabled on"><i class="icon glyphicon glyphicon-dashboard"></i> 饮品推荐</p><hr>
+            <div class="row clearfix" id="img">
+                <div class="col-md-3 col-xs-6 column">
+                    <a href="#" class="thumbnail">
+                        <img src="images/viewImg01.jpg" data-toggle="tooltip" data-placement="top" data-html="true" title="<h5 style='color: cyan'>茶奶& 烧仙草</h5>" data-container="body" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-6 column">
+                    <a href="#" class="thumbnail">
+                        <img src="images/viewImg02.jpg" data-toggle="tooltip" data-placement="top" data-html="true" title="<h5 style='color: cyan'>怦然心动！ 手摇奶茶——蜜雪珍珠奶茶。摇一下 爱上它</h5>" data-container="body"  alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-6 column">
+                    <a href="#" class="thumbnail">
+                        <img src="images/viewImg03.jpg"alt="">
+                    </a>
+                </div>
+                <div class="col-md-3 col-xs-6 column">
+                    <a href="#"  class="thumbnail">
+                        <img src="images/viewImg04.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div><br>
+        <div id="hot">
+            <p class="btn btn-default disabled on"><i class="icon glyphicon glyphicon-dashboard"></i> 店铺精选</p>
+            <hr>
+            <div id="running" class="col-md-6 col-sm-12">
+                <div class="row clearfix">
+                    <div class="col-md-6 col-sm-12 column">
+                        <div class="carousel slide" data-interval="3000" data-ride="carousel" id="carousel-75404">
+                            <ol class="carousel-indicators">
+                                <li class="active" data-slide-to="0" data-target="#carousel-75404">
+                                </li>
+                                <li data-slide-to="1" data-target="#carousel-75404">
+                                </li>
+                                <li data-slide-to="2" data-target="#carousel-75404">
+                                </li>
+                            </ol>
+                            <div class="carousel-inner" data-ride="2000">
+                                <div class="item active">
+                                    <img alt="0" src="images/banner1.jpg" />
+                                    <div class="carousel-caption">
+                                        <h4>
+                                            超级檬奶茶
+                                        </h4>
+                                        <p>
+                                            精选来自台湾，印度，日本，福建不同种类的茶叶，搭配来自新西兰特有的奶酪
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img alt="1" src="images/banner2.jpg" />
+                                    <div class="carousel-caption">
+                                        <h4>
+                                            “荤菜”——龟苓膏，我一定不是最后一个知道的
+                                        </h4>
+                                        <p>
+                                            正宗龟苓膏，甜苦适中，具有清热利湿的效果，是一种不可多得的药膳
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img alt="2" src="images/banner3.jpg" />
+                                    <div class="carousel-caption">
+                                        <h4>
+                                        养生奶茶，让你冬天不再寒冷！
+                                        </h4>
+                                        <p>
+                                        平均一杯不到9元哦
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-75404" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <div></div>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-75404" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <div></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--精选部分-->
+            <div class="well beauty col-md-6 col-sm-12">
+                <h2 class="wrapper-mobile text-center">茶奶精选</h2>
+                <h2 class="wrapper-mobile text-center"><small>用心发现更多美</small></h2>
+                <div class="row ">
+                    <div class="col col-sm-6 col-md-2">
+                        <a href="#">
+                            <img src="https://www-static.chinacdn.starbucks.com.cn/assets/images/homepage/tmall-card-01.png" alt="" >
+                            <h4 class="title">会员礼包</h4>
+                            <h4><small>更多新意好礼</small></h4>
+                            <span class="mask">了解更多&gt;</span>
+                        </a>
+                        <div class="gradient">
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6 col-md-2">
+                        <a href="#">
+                            <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-card-02.png" alt="">
+                            <h4 class="title">惊喜礼卡</h4>
+                            <h4><small>让心意相随</small></h4>
+                            <span class="mask">了解更多&gt;</span>
+                        </a>
+                        <div class="gradient">
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6 col-md-2">
+                        <a href="#">
+                            <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-eticket.png" alt="">
+                            <h4 class="title">电子商券</h4>
+                            <h4><small>美好从第一杯开始</small></h4>
+                            <span class="mask">了解更多&gt;</span>
+                        </a>
+                        <div class="gradient">
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6 col-md-2">
+                        <a href="#">
+                            <img src="https://www-static.chinacdn.starbucks.com.cn/prod/assets/images/homepage/tmall-reserve.png" alt="">
+                            <h4 class="title">茶生活</h4>
+                            <h4><small>生活用心创造</small></h4>
+                            <span class="mask">了解更多&gt;</span>
+                        </a>
+                        <div class="gradient">
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                            <span class="caton"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div id="connect">
+            <p class="btn btn-default disabled on"><i class="icon glyphicon glyphicon-dashboard"></i> 店铺相关</p>
+            <hr>
+            <div id="main">
+                <div class="row clearfix">
+                    <div class="col-md-3 col-sm-12 col-xs-3 column">
+                        <aside>
+                            <!--垂直导航-->
+                            <ul class="nav nav-tabs nav-stacked">
+                                <li class="active">
+                                    <a href="#">空气中弥漫香甜的味道</a>
+                                </li>
+                                <li>
+                                    <a href="#">花朵绽放 浓香在围绕</a>
+                                </li>
+                                <li>
+                                    <a href="#">快乐就是这么简单</a>
+                                </li>
+                            </ul>
+                            <!--折叠列表组-->
+                            <div class="list-group regionItem" data-stopPropagation="true">  <!--li的两个属性都是防止下拉菜单的回收-->
+                                <a href="#list-group-item" class="list-group-item active collapse" data-toggle="collapse" data-target="#list-group-item">
+                                最近新闻
+                                <strong><i class="glyphicon glyphicon-chevron-down"></i></strong>
+                                </a>
+                                <div class="collapse" id="list-group-item">
+                                    <a href="#" class="list-group-item">关于2020年上半年全国大学英语四、六级考试延期举行的公告</a>
+                                    <a href="#" class="list-group-item">中美"香港战役"已经打响 美国挺着病身要"制裁中国"</a>
+                                    <a href="#" class="list-group-item">公安部：全力指导支持香港警队止暴制乱、恢复秩序</a>
+                                    <a href="#" class="list-group-item">男子医院抽出奶白色血液 医生：长期不规律饮食所致</a>
+                                </div>
+                            </div>
+                            <!--折叠面板-->
+                            <div class="panel panel-success" data-stopPropagation="true">
+                                <div class="panel-heading" data-toggle="collapse" data-target="#panel-item">
+                                    <a href="#panel-item" class="panel-title">文章</a>
+                                    <strong><i class="glyphicon glyphicon-chevron-down"></i></strong>
+                                </div>
+                                <div class="panel-body collapse" id="panel-item">
+                                  <a href="passagepage.html"><i class="glyphicon glyphicon-share-alt"></i> 关于彩虹你知道的有哪些？</a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-6 column">
+                        <!--选项卡-->
+                        <div class="tabbable" id="tabs-426266">
+                            <ul class="nav nav-pills">
+                                <li class="active">
+                                    <a href="#pane1" data-toggle="tab">珍珠奶茶</a>
+                                </li>
+                                <li>
+                                    <a href="#pane2" data-toggle="tab">英式奶茶</a>
+                                </li>
+                                <li>
+                                    <a href="listpage.html">查看更多分类 <strong>&raquo;</strong></a>
+                               </li>
+                            </ul>
+                            <!--饮品缩略图-->
+                            <br>
+                            <div class="tab-content">
+                                <!--图1-->
+                                <div class="tab-pane active" id="pane1">
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-4">
+                                            <div class="regionItem" data-stopPropagation="true" style="height:100%; width:287px">  <!--li的两个属性都是防止下拉菜单的回收-->
+                                                <a href="#collapseimg1" data-toggle="collapse" data-target="#collapseimg1">
+                                                    <div class="thumbnail">
+                                                      <img src="images/gp3.jpg" style="height:100%; width:287px" alt="...">
+                                                      <Strong><i class="caret"></i></Strong>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="collapse" id="collapseimg1">
+                                                <div class="caption">
+                                                <h3>Thumbnail label</h3>
+                                                <p>...</p>
+                                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4">
+                                            <div class="regionItem" data-stopPropagation="true">  <!--li的两个属性都是防止下拉菜单的回收-->
+                                                <a href="#collapseimg2" data-toggle="collapse" data-target="#collapseimg2" height="100%" width="287px">
+                                                    <div class="thumbnail">
+                                                      <img src="images/gp1.jpg" alt="...">
+                                                      <Strong><i class="caret"></i></Strong>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="collapse" id="collapseimg2">
+                                                <div class="caption">
+                                                <h3>Thumbnail label</h3>
+                                                <p>...</p>
+                                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4s col-md-4">
+                                            <div class="regionItem" data-stopPropagation="true">  <!--li的两个属性都是防止下拉菜单的回收-->
+                                                <a href="#collapseimg3" data-toggle="collapse" data-target="#collapseimg3" height="100%" width="287px">
+                                                    <div class="thumbnail">
+                                                      <img src="images/gp2.jpg" alt="...">
+                                                      <Strong><i class="caret"></i></Strong>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="collapse" id="collapseimg3">
+                                                <div class="caption">
+                                                <h3>自制脏脏珍珠奶茶</h3>
+                                                <p>添的就是瓶盖儿！</p>
+                                                <h2><small><del>18</del><i class="badge">元</i></small></a> <a href="#" class="btn btn-default" role="button">15<i class="badge">元</i></a></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--图2-->
+                                <div class="tab-pane" id="pane2">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="regionItem" data-stopPropagation="true">  <!--li的两个属性都是防止下拉菜单的回收-->
+                                                <a href="#collapseimg4" data-toggle="collapse" data-target="#collapseimg4">
+                                                    <div class="thumbnail">
+                                                      <img src="images/gp4.jpg" alt="...">
+                                                      <Strong><i class="caret"></i></Strong>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="collapse" id="collapseimg4">
+                                                <div class="caption">
+                                                <h3>Thumbnail label</h3>
+                                                <p>...</p>
+                                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="regionItem" data-stopPropagation="true">  <!--li的两个属性都是防止下拉菜单的回收-->
+                                                <a href="#collapseimg5" data-toggle="collapse" data-target="#collapseimg5">
+                                                    <div class="thumbnail">
+                                                      <img src="images/gp5.jpg" alt="...">
+                                                      <Strong><i class="caret"></i></Strong>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="collapse" id="collapseimg5">
+                                                <div class="caption">
+                                                <h3>迪尼熊英式奶茶</h3>
+                                                <p>...</p>
+                                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4">
+                                            <div class="regionItem" data-stopPropagation="true">  <!--li的两个属性都是防止下拉菜单的回收-->
+                                                <a href="#collapseimg6" data-toggle="collapse" data-target="#collapseimg6">
+                                                    <div class="thumbnail">
+                                                      <img src="images/gp6.jpg" alt="...">
+                                                      <Strong><i class="caret"></i></Strong>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="collapse" id="collapseimg6">
+                                                <div class="caption">
+                                                <h3>孔雀咖啡杯</h3>
+                                                <p>瓷元素 英式奶茶的绝配</p>
+                                                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--店铺栏目-->
+                        <div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-3 column">
+                        <!--视频音乐链接-->
+                        <div class="list-group">
+                            <h4 class="list-group-item text-center">视频与音乐</h4>
+                            <a href="video/video.html" target="_new" class="list-group-item list-group-item-info">
+                                <h4 class="list-group-item-heading"><i class="glyphicon glyphicon-facetime-video"></i> 视频欣赏</h4>
+                            </a>
+                            <a href="video/autio.html" target="_new" class="list-group-item list-group-item-warning">
+                                <h4 class="list-group-item-heading"><i class="glyphicon glyphicon-headphones"></i> 音乐欣赏</h4>
+                            </a>
+                        </div>
+                        <!--canvas动态加载-->
+                        <div id="nowtime" style="font-size: 20px; color: blue"></div>
+                        <canvas id="canvas" width="444px" height="444px">
+                            添加失败！
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main><br>
+    <p class="btn btn-default disabled on"><i class="icon glyphicon glyphicon-dashboard"></i> 联系我们</p>
+    <hr>
+    <footer id="footer">
+        <div class="row pull-center">
+            <div class="col-md-3 column">
+                <h4 class="text-center"><i class="glyphicon glyphicon-user"></i>其他</h4>
+                <a href="#">友情链接</a>&nbsp;&nbsp;
+                <a href="#" class="default">联系我们 qq:254410466</a>
+            </div>
+            <div class="col-md-3 column">
+                <h4 class="text-center"><i class="glyphicon glyphicon-fire"></i>适用硬件</h4>
+                <a href="#">pc端、 手机端、 平板端</a>
+            </div>
+            <div class="col-md-3 column">
+                <h4 class="text-center"><i class="glyphicon glyphicon-flash"></i>版权所有</h4>
+                <a href="#">T60+付亮</a>
+            </div>
+            <div class="col-md-3 column">
+                <h4 class="text-center"><i class="glyphicon glyphicon-globe"></i>最佳浏览器</h4>
+                <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_new">Chrome</a>&nbsp;&nbsp;
+                <a href="http://www.firefox.com.cn" target="_new">Firefox</a>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="jquery/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/js插件.js"></script>
+    <script src="bootstrap/js/bootstrapValidator.js"></script>
+  </body>
+</html>

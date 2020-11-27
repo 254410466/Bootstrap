@@ -1,0 +1,37 @@
+        div.thumbnail{
+            height: 310px
+        }
+        div.thumbnail img{
+            height: 65.625%;
+            width: 100%
+        }
+        div.qiu{
+            height: 200px;
+            width: 200px;
+            margin: 30px auto;
+            border: 2px blue solid;                       
+            background: rgb(93, 93, 236);
+            overflow: hidden;border-radius: 50%;
+        }
+        div.sea{
+            border: 1px red solid;
+            height: 300px;
+            width: 300px;
+            background: #fff;
+            position: relative;
+            top: -100%;
+            left: -25%;
+            border-radius: 40%;
+            animation: float 5s ease-in-out infinite;
+        }
+        @keyframes float{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        h2.text{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(93, 93, 236);
+        }

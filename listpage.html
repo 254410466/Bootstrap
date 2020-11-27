@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+
+    <!--引入-->
+    <link rel="stylesheet" href="css/css渲染.css" type="text/css" />
+    <link rel="stylesheet" href="css/listpage_css.css" type="text/css" />
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="T2018210160+付亮/jquery/jquery-1.10.2.min.js"></script>
+      <script src="T2018210160+付亮/bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+  <body data-spy="scroll" data-offset="0" data-target="#navscroll" style="overflow:auto;position:relative">
+	<div class="container-fluid">
+        <header>
+          <div class="row clearfix">
+            <div class="col-md-12 column body">
+                <div class="jumbotron" >
+                    <h1 class="text-center">
+                       茶奶
+                    </h1>
+                    <p class="text-left col-md-offset-3">
+                        不一样的配方，不一样的味道，
+                    </p>
+                    <p class="text-left col-md-offset-5">
+                        不一样的味道，不一样的体验，
+                    </p>
+                    <p class="text-left col-md-offset-7">
+                        而我们的目的就是给你带来不一样的体验！
+                    </p>
+                    <p class="text-center">
+                         <a class="btn btn-primary btn-large" href="#">开始体验</a>
+                    </p>
+                </div>
+                <nav class="navbar navbar-default navbar-inverse" role="navigation">
+                    <div class="navbar-header">
+                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                             <span class="sr-only">Toggle navigation</span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                             <span class="icon-bar"></span>
+                          </button>
+                          <a class="navbar-brand" href="index.html">茶奶</a>
+                    </div>
+                    <div class="collapse navbar-collapse row" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav col-md-4 col-lg-4 hidden-sm">
+                            <li class="active">
+                                 <a href="#">首页</a>
+                            </li>
+                            <li>
+                                 <a href="#"><i class="badge btn-danger">热</i>最新</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">热门饮品 
+                                    <strong class="caret"></strong>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                         <a href="#">丝滑奶茶
+                                            <span class="badge pull-right">42</span>
+                                         </a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">港市奶茶
+                                            <span class="badge pull-right">32</span>
+                                         </a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">玫瑰香芋奶茶
+                                            <span class="badge pull-right">40</span>
+                                         </a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">玫瑰西米露
+                                            <span class="badge pull-right">38</span>
+                                         </a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">蜜爽绿豆奶茶
+                                            <span class="badge pull-right">47</span>
+                                         </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form navbar-left col-md-7 col-xs-8 col-sm=2" role="search">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <label for="submit" class="input-group-addon"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></label>
+                                    <input type="text" class="form-control" id="submit" placeholder="店铺搜索"/>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-default">找一找</button>
+                        </form>
+                        <ul class="nav navbar-nav navbar-right row col-md-3 col-xs-3 col-sm-4">
+                            <li>
+                                 <a href="#" data-toggle="modal" data-target="#login" id="#page1">登录</a>
+                            </li>
+                            <li>
+                                <a href="#" data-toggle="modal" data-target="#new" id="#page1">注册</a>
+                           </li>
+                            <!--登录模态框-->
+                            <div id="login" class="modal" tabindex="-1">
+                                <!--窗口声明-->
+                                <div class="modal-dialog">
+                                <!--内容声明-->
+                                <div class="modal-content">
+                                <!-- 头部 -->
+                                    <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                    <h4 class="modal-title text-center">Login A User</h4>
+                                    </div>
+                                    <!-- 主体 -->
+                                    <div class="modal-body ">
+                                        <form action="#" role="form" class="form-horizontal" id="loginfrom">
+                                            <div class="form-group">
+                                                <label for="uname" class="col-md-2 col-lg-2 col-sm-2 control-label">用户名</label>
+                                                <div class="col-md-8">
+                                                <input type="text" class="form-control" id="uname" placeholder="请输入用户名">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="psw" class="col-md-2 control-label">密码</label>
+                                                <div class="col-md-8">
+                                                <input type="text" class="form-control" id="psw" placeholder="请输入密码">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- 注脚 -->
+                                    <div class="modal-footer">
+                                        <p class=" btn-success text-center">登录</p>
+                                        <p class=" btn-warning text-center col-md-6" data-toggle="modal" data-target="#new" id="#page1">还没有？ 立即注册</p>
+                                        <p class=" btn-danger text-center col-md-6" class="close" data-dismiss="modal">关闭</p>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+
+                                <!--我是分隔符-->
+
+                                    <!--注册模态框-->
+                                <div id="new" class="modal" tabindex="-1">
+                                    <!--窗口声明-->
+                                    <div class="modal-dialog">
+                                    <!--内容声明-->
+                                    <div class="modal-content">
+                                    <!-- 头部 -->
+                                        <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span>&times;</span>
+                                        </button>
+                                        <h4 class="modal-title text-center">Create A User</h4>
+                                        </div>
+                                        <!-- 主体 -->
+                                        <div class="modal-body ">
+                                            <form action="#" role="form" class="form-horizontal" id="newform">
+                                                <div class="form-group">
+                                                    <label for="uname" class="col-md-2 control-label">用户名</label>
+                                                    <div class="col-md-8">
+                                                    <input type="text" class="form-control" name="uname" id="uname" placeholder="请输入用户名">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="psw" class="col-md-2 control-label">密码</label>
+                                                    <div class="col-md-8">
+                                                    <input type="text" class="form-control" name="psw" id="psw" placeholder="请输入密码">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="phone" class="col-md-2 control-label">手机号</label>
+                                                    <div class="col-md-8">
+                                                    <input type="text" class="form-control" name="phone" maxlength="11" id="phone" placeholder="请填写手机号">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <label for="email" class="col-md-2 control-label">邮箱</label>
+                                                    <div class="col-md-8">
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="请输入邮箱号">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- 注脚 -->
+                                        <div class="modal-footer">
+                                            <p class="newuser btn-success text-center">注册</p>
+                                            <p class=" btn-warning text-center col-md-6" data-toggle="modal" data-target="#login" id="#page1">已有账号？ 立即登录</p>
+                                            <p class=" btn-danger text-center col-md-6" class="close" data-dismiss="modal">关闭</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <!--下拉菜单-->
+                            <li class="dropdown">
+                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">个人中心<strong class="caret"></strong></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                         <a href="#">我的足迹
+                                            <i class="badge">暂无</i>
+                                         </a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li class="regionItem" data-stopPropagation="true">  <!--li的两个属性都是防止下拉菜单的回收-->
+                                         <a href="#" data-toggle="collapse" data-target="#collapseExample">我喜欢的
+                                             <i class="badge">！</i>
+                                         </a>
+                                    </li>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="well">
+                                          港市奶茶
+                                        </div>
+                                        <i class="divider"></i>
+                                        <div class="well">
+                                          玫瑰奶茶西米露
+                                        </div>
+                                    </div>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">成交订单价</a>
+                                    </li>
+                                    <li class="divider">
+                                    </li>
+                                    <li>
+                                         <a href="#">待成交订单</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div id="navscroll">
+                    <ul class="nav nav-pills">
+                        <li class="disabled">
+                            <a href="#">惊喜一夏</a>
+                        </li>
+                        <li class="active">
+                            <a href="#many">饮品推荐</a>
+                        </li>
+                        <li>
+                            <a href="#hot">精品分类</a>
+                        </li>
+                        <li>
+                            <a href="#connect">店铺相关</a>
+                        </li>
+                        <li>
+                            <a href="#footer">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+          </div>
+        </div>
+    </header><br>
+    <main>
+        <div id="many">
+            <p class="btn btn-default disabled on"><i class="icon glyphicon glyphicon-dashboard"></i> 饮品推荐</p><hr>
+            <div class="well center-block" style="width: 70%">
+                <div class="container">
+                    <div class="pull-center" >
+                        <h2 class="text-center" style="letter-spacing: 2px;">每天一杯好心情</h2>
+                        <h2 class="text-center"><small> 全新品种，新鲜出炉。此刻开始，你的味蕾我们承包</small></h2>
+                    </div>
+                    <div class="center-block">
+                        <div class="row clearfix">
+                          <div class="center-block" style="width: 60%">
+                            <div class="carousel slide" data-interval="3000" data-ride="carousel" id="carousel-75404">
+                                <ol class="carousel-indicators">
+                                    <li class="active" data-slide-to="0" data-target="#carousel-75404">
+                                    </li>
+                                    <li data-slide-to="1" data-target="#carousel-75404">
+                                    </li>
+                                    <li data-slide-to="2" data-target="#carousel-75404">
+                                    </li>
+                                </ol>
+                                <div class="carousel-inner" data-ride="2000">
+                                    <div class="item active">
+                                        <img alt="0" style="margin: auto" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=103516313,1427565277&fm=26&gp=0.jpg" />
+                                        <div class="carousel-caption">
+                                            <h4>
+                                                超级檬奶茶
+                                            </h4>
+                                            <p>
+                                                精选来自台湾，印度，日本，福建不同种类的茶叶，搭配来自新西兰特有的奶酪
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img alt="1" style="margin: auto" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1494386513,1076996561&fm=26&gp=0.jpg" />
+                                        <div class="carousel-caption">
+                                            <h4>
+                                                “荤菜”——龟苓膏，我一定不是最后一个知道的
+                                            </h4>
+                                            <p>
+                                                正宗龟苓膏，甜苦适中，具有清热利湿的效果，是一种不可多得的药膳
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img alt="2" style="margin: auto" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3272895301,3745523447&fm=15&gp=0.jpg" />
+                                        <div class="carousel-caption">
+                                            <h4>
+                                            养生奶茶，让你冬天不再寒冷！
+                                            </h4>
+                                            <p>
+                                            平均一杯不到9元哦
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#carousel-75404" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <div></div>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-75404" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <div></div>
+                                </a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="center-block">
+                        <h2 class="text-center"><small> 一站对接各大平台</small></h2>
+                        <ul class="nav nav-pills col-md-offset-4">
+                            <li role="presentation"></li><img src="images/QQ.png" alt=""></li>
+                            <li role="presentation"></li><img src="images/zhifubao.png" alt=""></li>
+                            <li role="presentation"></li><img src="images/baidu.png" alt=""></li>
+                            <li role="presentation"></li><img src="images/mi.png" alt=""></li>
+                        </ul>
+                    </div>
+
+                </div>
+        </div><br>
+        <div id="hot">
+            <p class="btn btn-default disabled on"><i class="icon glyphicon glyphicon-dashboard"></i> 精品分类</p>
+            <hr>
+            <div class="container" style="border: 1px red solid">
+                <!-- 分类 -->
+                <div>
+                <h3><i class="glyphicon glyphicon-pencil"></i> 酥油茶</h3>
+                    <div class="col-sm-6 col-md-4">
+                      <div class="thumbnail">
+                        <img src="images/tea1.jpg" alt="...">
+                        <div class="caption">
+                          <h3>Thumbnail label</h3>
+                          <p>...</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="images/tea2.jpg" alt="...">
+                          <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="images/tea3.jpg" alt="...">
+                          <div class="caption active">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>                            
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div>
+                      <h3><i class="glyphicon glyphicon-pencil"></i> 鸳鸯奶茶</h3>
+                      <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                          <img src="images/tea4.jpg" alt="...">
+                          <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                            <img src="images/tea5.jpg" alt="...">
+                            <div class="caption">
+                              <h3>Thumbnail label</h3>
+                              <p>...</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                          <div class="thumbnail">
+                            <img src="images/tea6.jpg" alt="...">
+                            <div class="caption active">
+                              <h3>Thumbnail label</h3>
+                              <p>...</p>                            
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <h2 class="col-lg-4 col-xs-12 col-md-12 text text-right">茶对你的爱</h2>
+                <div class="qiu">
+                    <div class="sea"></div>
+                </div>
+                <h2 class="col-lg-4 col-xs-12 col-md-12 text text-left">像海一样永无止境</h2>
+            </div>
+        </div><br>
+        <div id="connect">
+            <p class="btn btn-default disabled on"><i class="icon glyphicon glyphicon-dashboard"></i> 店铺相关</p>
+            <hr>
+            <div id="main">
+                <a href="passagepage.html">查看更多文章 &raquo;</a>     
+                <hr>
+                <div class="row clearfix">
+                    <!--媒体组件-->
+                    <div class="col-md-4 column">
+                        <div class="media">
+                            <a href="#" class="pull-left"><img src="http://www.i-miguo.com/uploadfiles/2019/0912/20190912124615331.jpg" class="media-object" alt='' /></a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                   2020很适合开奶茶店的人，是你吗？
+                                </h4> 
+                                　 奶茶这种被大家捧在手心的美食，喝一杯就能给生活带来满满的正能量，很多人都喜欢喝奶茶，而且喝奶茶不需要理由。曾有奋斗青年说过，当只身一人在这繁华的城市里奋斗，时常会有被孤独笼罩的感觉，但只要手捧一杯温热的奶茶，就能感受到一丝的温暖。可见，奶茶发挥的作用越来越大，也成为了不少创业者的选择，那么2020年哪些人适合开奶茶店呢？
+                            </div>
+                        </div><hr>
+                        <div class="media">
+                            <a href="#" class="pull-left"><img src="http://www.i-miguo.com/uploadfiles/2019/1015/20191015020033116.jpg" class="media-object" alt='' /></a>
+                            <div class="media-body">
+                                <h4 class="media-heading">
+                                    什么奶茶店开了不怕没人气
+                                </h4>
+                                　　眼下的创业项目相当多，基本上什么行业都有人去做，而在这么多的行业之中，茶饮可以说一直都是朝阳行业，换句话说就是大家都需要它。于是越来越多的人都想要进入这个行业，但是因为毫无经验，不知道自己适合开什么茶饮店，于是在原地徘徊。今天给大家说说没经验也可以开的蜜菓茶饮店，让大家都可以放心的好品牌。
+                            </div>
+                        </div>
+                    </div>
+                    <!--导航 + 分页器 + 媒体-->
+                    <div class="col-md-7 col-md-offset-1 column">
+                        <!-- 导航 -->
+                        <ul class="breadcrumb">您当前的位置：
+                            <li>
+                                 <a href="index.html">首页</a>
+                            </li>
+                            <li class="active">
+                                 当前
+                            </li>
+
+                        </ul><br>
+                        <!-- 基于选项卡的 媒体 + 分页-->
+                        <div class="col-md-12 column">
+                            <div class="tabbable" id="tabs-185505">
+                                <div class="tab-content">
+                                <!-- 1 -->
+                                  <div class="tab-pane active" id="btn1"> 
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <img src="http://www.i-miguo.com/uploadfiles/2019/0805/20190805015922116.jpg" class="media-object" alt='' />
+                                        </a>
+                                        <div class="media-body">
+                                            <blockquote class="media-heading title text-center">
+                                                <h4>
+                                                    点一杯奶茶需要几个步骤
+                                                </h4>
+                                                <footer class="text-center">发布日期:2020-05-21 14:22:07    编辑:<cite title="蜜菓奶茶"> 蜜菓奶茶 </cite></footer> 
+                                            </blockquote>
+                                            <p><sup></sup> 整桶制作的对冲和协调性产生的口感更加香滑，入口可以感受到浓郁的奶香和厚重的茶香混合，令人印象深刻小优拼配港红就是金香港红。港红的味道<strong> 醇厚，香气悠长，茶汤久放不变色</strong>，非常适合传统奶茶制作。丝滑奶茶，冰淇淋口感，再配上软软糯糯又很有嚼劲的手作珍珠，简直就是最佳cp。<sup> 充满格雷伯爵茶香的蛋皮，冰淇淋般口感的奶油，还有软糯可口的爆浆珍珠，香甜而不油腻</sup>，这口感简直绝了。</p>
+                                            <!-- 进度条 -->
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                 <i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;当前阅读量：60%
+                                                </div>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                                 <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;&nbsp;当前点赞量：30%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane active media" id="panel-359025">
+                                        <a href="#" class="pull-left">
+                                            <img src="http://www.i-miguo.com/uploadfiles/2019/0604/20190604022136693.jpg" class="media-object" alt='' />
+                                        </a>
+                                        <div class="media-body">
+                                            <blockquote class="media-heading title text-center">
+                                                <h4>
+                                                    点一杯奶茶需要几个步骤
+                                                </h4>
+                                                <footer class="text-center">发布日期:2020-05-21 14:22:07    编辑:<cite title="蜜菓奶茶"> 蜜菓奶茶 </cite></footer> 
+                                            </blockquote>
+                                            <p><sup></sup> 整桶制作的对冲和协调性产生的口感更加香滑，入口可以感受到浓郁的奶香和厚重的茶香混合，令人印象深刻小优拼配港红就是金香港红。港红的味道<strong> 醇厚，香气悠长，茶汤久放不变色</strong>，非常适合传统奶茶制作。丝滑奶茶，冰淇淋口感，再配上软软糯糯又很有嚼劲的手作珍珠，简直就是最佳cp。<sup> 充满格雷伯爵茶香的蛋皮，冰淇淋般口感的奶油，还有软糯可口的爆浆珍珠，香甜而不油腻</sup>，这口感简直绝了。<p><sup></sup> 整桶制作的对冲和协调性产生的口感更加香滑，入口可以感受到浓郁的奶香和厚重的茶香混合，令人印象深刻小优拼配港红就是金香港红。港红的味道醇厚，香气悠长，茶汤久放不变色，非常适合传统奶茶制作。丝滑奶茶，冰淇淋口感，再配上软软糯糯又很有嚼劲的手作珍珠，简直就是最佳cp。<sup> 充满格雷伯爵茶香的蛋皮，冰淇淋般口感的奶油，还有软糯可口的爆浆珍珠，香甜而不油腻</sup>，这口感简直绝了。
+                                            <!-- 进度条 -->
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                 <i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;当前阅读量：80%
+                                                </div>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                                                 <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;&nbsp;当前点赞量：70%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <!-- 2 -->
+                                <div class="tab-pane media" id="btn2">
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <img src="http://www.i-miguo.com/uploadfiles/2019/0805/20190805015636955.jpg" class="media-object" alt='' />
+                                        </a>
+                                        <div class="media-body">
+                                            <blockquote class="media-heading title text-center">
+                                                <h4>
+                                                    点一杯奶茶需要几个步骤
+                                                </h4>
+                                                <footer class="text-center">发布日期:2020-05-21 14:22:07    编辑:<cite title="蜜菓奶茶"> 蜜菓奶茶 </cite></footer> 
+                                            </blockquote>
+                                            <p><sup></sup> 整桶制作的对冲和协调性产生的口感更加香滑，入口可以感受到浓郁的奶香和厚重的茶香混合，令人印象深刻小优拼配港红就是金香港红。港红的味道<strong> 醇厚，香气悠长，茶汤久放不变色</strong>，非常适合传统奶茶制作。丝滑奶茶，冰淇淋口感，再配上软软糯糯又很有嚼劲的手作珍珠，简直就是最佳cp。<sup> 充满格雷伯爵茶香的蛋皮，冰淇淋般口感的奶油，还有软糯可口的爆浆珍珠，香甜而不油腻</sup>，这口感简直绝了。</p>
+                                            <!-- 进度条 -->
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                                 <i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;当前阅读量：60%
+                                                </div>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                                 <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;&nbsp;当前点赞量：30%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane active media" id="panel-359025">
+                                        <a href="#" class="pull-left">
+                                            <img src="http://www.i-miguo.com/uploadfiles/2019/1023/20191023020023103.jpg" class="media-object" alt='' />
+                                        </a>
+                                        <div class="media-body">
+                                            <blockquote class="media-heading title text-center">
+                                                <h4>
+                                                    点一杯奶茶需要几个步骤
+                                                </h4>
+                                                <footer class="text-center">发布日期:2020-05-21 14:22:07    编辑:<cite title="蜜菓奶茶"> 蜜菓奶茶 </cite></footer> 
+                                            </blockquote>
+                                            <p><sup></sup> 整桶制作的对冲和协调性产生的口感更加香滑，入口可以感受到浓郁的奶香和厚重的茶香混合，令人印象深刻小优拼配港红就是金香港红。港红的味道<strong> 醇厚，香气悠长，茶汤久放不变色</strong>，非常适合传统奶茶制作。丝滑奶茶，冰淇淋口感，再配上软软糯糯又很有嚼劲的手作珍珠，简直就是最佳cp。<sup> 充满格雷伯爵茶香的蛋皮，冰淇淋般口感的奶油，还有软糯可口的爆浆珍珠，香甜而不油腻</sup>，这口感简直绝了。<p><sup></sup> 整桶制作的对冲和协调性产生的口感更加香滑，入口可以感受到浓郁的奶香和厚重的茶香混合，令人印象深刻小优拼配港红就是金香港红。港红的味道醇厚，香气悠长，茶汤久放不变色，非常适合传统奶茶制作。丝滑奶茶，冰淇淋口感，再配上软软糯糯又很有嚼劲的手作珍珠，简直就是最佳cp。<sup> 充满格雷伯爵茶香的蛋皮，冰淇淋般口感的奶油，还有软糯可口的爆浆珍珠，香甜而不油腻</sup>，这口感简直绝了。
+                                            <!-- 进度条 -->
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                                 <i class="glyphicon glyphicon-book"></i>&nbsp;&nbsp;当前阅读量：80%
+                                                </div>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                                                    <i class="glyphicon glyphicon-thumbs-up"></i>&nbsp;&nbsp;当前点赞量：70%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div><hr>
+                                 <!-- 分页器 -->
+                                <nav class="pagination">
+                                    <ul class="nav nav-pills">
+                                    <li class="disabled"><a href="">当前页</a> </li>
+                                    <li clas="Previous">
+                                        <a href="javascript:;" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="active on">
+                                            <a href="#btn1" data-toggle="tab">1</a>
+                                    </li>
+                                    <li class="on">
+                                            <a href="#btn2" data-toggle="tab">2</a>
+                                    </li>
+                                    <li class="next">
+                                        <a href="javascript:;" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                    </ul>
+                                </nav>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main><br>
+    <p class="btn btn-default disabled on"><i class="icon glyphicon glyphicon-dashboard"></i> 联系我们</p>
+    <hr>
+    <footer id="footer">
+        <div class="row pull-center">
+            <div class="col-md-3 column">
+                <h4 class="text-center"><i class="glyphicon glyphicon-user"></i>其他</h4>
+                <a href="#">友情链接</a>&nbsp;&nbsp;
+                <a href="#" class="default">联系我们 qq:254410466</a>
+            </div>
+            <div class="col-md-3 column">
+                <h4 class="text-center"><i class="glyphicon glyphicon-fire"></i>适用硬件</h4>
+                <a href="#">pc端、 手机端、 平板端</a>
+            </div>
+            <div class="col-md-3 column">
+                <h4 class="text-center"><i class="glyphicon glyphicon-flash"></i>版权所有</h4>
+                <a href="#">T60+付亮</a>
+            </div>
+            <div class="col-md-3 column">
+                <h4 class="text-center"><i class="glyphicon glyphicon-globe"></i>最佳浏览器</h4>
+                <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_new">Chrome</a>&nbsp;&nbsp;
+                <a href="http://www.firefox.com.cn" target="_new">Firefox</a>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="jquery/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/js插件.js"></script>
+    <script src="bootstrap/js/bootstrapValidator.js"></script>
+  </body>
+</html>

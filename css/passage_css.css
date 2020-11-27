@@ -1,0 +1,225 @@
+         div#hot div.container{
+                position: relative;
+                height: 80vh;
+                width:  100vh;
+                /* background: rgba(0, 0, 0, .3)    */
+            }
+            div#hot div.container div{
+                position: absolute;
+                height: 30%;
+                width: 35%;
+            }
+            div#hot div.container div img{
+                height: 100%;
+                width: 100%;
+                cursor: pointer;
+                transition: 1s 
+            }
+            div#hot div.container div:hover img{
+                transform: scale(1.1, 1.1);
+            }
+            div#hot div.container span:nth-child(2){
+                position: absolute;
+                height: 30%;
+                width: 35%;
+                top: 10%;
+                left: 0;
+                background: #fff;
+                z-index:-1;
+                filter: blur(10px);
+                transition: 1s
+            }
+            div#hot div.container span:nth-child(4){
+                position: absolute;
+                height: 30%;
+                width: 35%;
+                top: 10%;
+                right: 0;
+                background: #fff;
+                z-index:-1;
+                filter: blur(10px);
+                transition: 1s
+            }
+            div#hot div.container span:nth-child(6){
+                position: absolute;
+                height: 30%;
+                width: 35%;
+                bottom: 6%;
+                left: 0;
+                background: #fff;
+                z-index:-1;
+                filter: blur(10px);
+                transition: 1s
+            }
+            div#hot div.container span:nth-child(8){
+                position: absolute;
+                height: 30%;
+                width: 35%;
+                bottom: 6%;
+                right: 0;
+                background: #fff;
+                z-index:-1;
+                filter: blur(10px);
+                transition: 1s
+            }
+            div#hot div.container div:hover + span{
+                transform: scale(1.1, 1.1);
+                background: rgb(33, 11, 224)
+            }
+            div#hot div.container div:nth-child(1){
+                top: 10%;
+                left: 0
+            }
+            div#hot div.container div:nth-child(3){
+                top: 10%;
+                right: 0
+            }
+            div#hot div.container div:nth-child(5){
+                bottom: 6%;
+                left: 0
+            }
+            div#hot div.container div:nth-child(7){
+                bottom: 6%;
+                right: 0
+            }
+            div#hot div.container ul{
+                position: absolute;
+                top: 60%;
+                left: 48%;
+                display: flex;
+                transform: translate(-50%, -50%);
+                list-style: none;
+            }
+            div#hot div.container ul li{
+                height: 20px; 
+                width: 20px;
+                border-radius: 14px;
+                background: red;
+                margin: 0 10px
+            }
+            div#hot div.container ul li:nth-child(1){
+                background: rgb(6, 236, 225);
+                animation: love1 5s infinite
+            }
+            div#hot div.container ul li:nth-child(2){
+                background: rgb(142, 245, 7);
+                animation: love2 5s .25s infinite
+            }
+            div#hot div.container ul li:nth-child(3){
+                background: rgb(51, 48, 224);
+                animation: love3 5s .5s infinite
+            }
+            div#hot div.container ul li:nth-child(4){
+                background: rgb(253, 7, 241);
+                animation: love4 5s .75s infinite
+            }
+            div#hot div.container ul li:nth-child(5){
+                background: red;
+                animation: love5 5s 1s infinite
+            }
+            div#hot div.container ul li:nth-child(6){
+                background: rgb(253, 7, 241);
+                animation: love6 5s 1.25s infinite
+            }
+            div#hot div.container ul li:nth-child(7){
+                background: rgb(51, 48, 224);
+                animation: love7 5s 1.5s infinite
+            }
+            div#hot div.container ul li:nth-child(8){
+                background: rgb(142, 245, 7);
+                animation: love8 5s 1.75s infinite
+            }
+            div#hot div.container ul li:nth-child(9){
+                background: rgb(6, 236, 225);
+                animation: love9 5s 2s infinite
+            }
+            @keyframes love1{
+                50%{
+                    height: 60px;
+                    transform: translateY(-20px)
+                }
+                100%{
+                    height: 0;
+                    transform: translateY(0)
+                }
+            }
+            @keyframes love2{
+                50%{
+                    height: 100px;
+                    transform: translateY(-30px)
+                }
+                100%{
+                    height: 0;
+                    transform: translateY(0)
+                }
+            }
+            @keyframes love3{
+                50%{
+                    height: 150px;
+                    transform: translateY(-50px)
+                }
+                100%{
+                    height: 0;
+                    transform: translateY(0)
+                }
+            }
+            @keyframes love4{
+                50%{
+                    height: 180px;
+                    transform: translateY(-30px)
+                }
+                100%{
+                    height: 0;
+                    transform: translateY(0)
+                }
+            }
+            @keyframes love5{
+                50%{
+                    height: 210px;
+                    transform: translateY(-30px)
+                }
+                100%{
+                    height: 0;
+                    transform: translateY(0)
+                }
+            }
+            @keyframes love6{
+                50%{
+                    height: 180px;
+                    transform: translateY(-30px)
+                }
+                100%{
+                    height: 0;
+                    transform: translateY(0)
+                }
+            }
+            @keyframes love7{
+                50%{
+                    height: 150px;
+                    transform: translateY(-50px)
+                }
+                100%{
+                    height: 0;
+                    transform: translateY(0)
+                }
+            }
+            @keyframes love8{
+                50%{
+                    height: 100px;
+                    transform: translateY(-30px)
+                }
+                100%{
+                    height: 0;
+                    transform: translateY(0)
+                }
+            }
+            @keyframes love9{
+                50%{
+                    height: 60px;
+                    transform: translateY(-20px)
+                }
+                100%{
+                    height: 0;
+                    transform: translateY(0)
+                }
+            }

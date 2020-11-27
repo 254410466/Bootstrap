@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+	<title>3.16+18软2+60+付亮</title>
+	<link rel="shortcut icon" href="https://gtms04.alicdn.com/tps/i4/TB1_oz6GVXXXXaFXpXXJDFnIXXX-64-64.ico" type="image/x-icon"/>
+	  <link rel="stylesheet" href="https://g.alicdn.com/thx/cube/1.3.2/cube.min.css">
+	  <link rel="stylesheet" href="incon/demo.css">
+	  <link rel="stylesheet" href="incon/iconfont.css">
+	  <script src="font_1079482_2vjl4rbn36d/iconfont.js"></script>
+	  <!-- jQuery -->
+	  <script src="https://a1.alicdn.com/oss/uploads/2018/12/26/7bfddb60-08e8-11e9-9b04-53e73bb6408b.js"></script>
+	  <!-- 代码高亮 -->
+	  <script src="https://a1.alicdn.com/oss/uploads/2018/12/26/a3f714d0-08e6-11e9-8a15-ebf944d7534c.js"></script>
+
+	<style>
+		body{background-image: url(photo/youku.png);
+			 background-repeat: no-repeat;}
+		#video{
+			margin:0 auto;
+			height:720px;
+			width:1424px;
+			margin-left:55px;
+			margin-top:70px;
+			object-fit: fill;
+			}
+		#button{
+			margin-left:55px;
+			margin-top:13px;
+		}
+	</style>
+	<!-- <script>
+		window.onload=function(){
+			var time=document.getElementById("video");
+			var currTime=time.currentTime;
+			var totalTime=time.duration;
+		}
+	</script> -->
+	<script>
+		
+		window.onload=function(){
+			
+			var video=document.getElementById("video");			
+			// 播放%播放
+			var play=document.getElementById("play");
+			var stop=document.getElementById("stop");
+			play.onclick=function(){
+				//video.load();
+				video.play();
+				play.hidden=true;
+				stop.hidden=false;
+			}
+			stop.onclick=function(){
+				video.pause();
+				play.hidden=false;
+				stop.hidden=true;
+			}
+			//静音
+			var num=0;
+			var voice=document.getElementById("voice");			
+			voice.onclick=function(){
+				num+=1;
+				if(num%2==0){
+					video.muted=false; 	//取消静音
+					this.style.backgroundColor="white";
+					this.style.color="black"
+				}else{
+					video.muted=true;
+					this.style.backgroundColor="blue";
+					this.style.color="white"
+				}
+			}
+			// 播放时间&结束
+			var currTime=document.getElementById("currTime");
+			var totalTime=document.getElementById("totalTime");
+			var timeend=document.getElementById("timeend");
+			video.ontimeupdate=function(){
+				currTime.innerHTML=video.currentTime;
+				totalTime.innerHTML=video.duration;
+			}
+			timeend.onclick=function(){
+				video.currentTime=video.duration;
+				video.load();
+				play.hidden=false;
+				stop.hidden=true;
+				};			
+			//加速&回放
+			var quickly1=document.getElementById("quickly1");
+			var quickly2=document.getElementById("quickly2");
+			var normal=document.getElementById("normal");
+			// var back=document.getElementById("backtime");
+			// //alert(back);
+			// back.onclick=function(){
+			// 	video.defaultPlaybackRate=0.5;
+			// 	//video.load();
+			// }
+			normal.onclick=function(){
+				video.playbackRate=1;
+			}
+			quickly1.onclick=function(){
+				video.playbackRate=1.5;
+			}
+			quickly2.onclick=function(){
+				video.playbackRate=2;
+			}
+		}
+	<!-- <script> -->
+	
+	<!-- 集数集合 -->
+	<!-- // <script> -->
+		var j=0;
+		var master=["lego.mp4","sintel.mp4","welcome.mp4"];
+		//alert(master.length)
+		$(document).ready(function(){
+			var video2=document.getElementById("video");	
+			
+			var firstGather=document.getElementById("firstGather");			
+			var oncetGather=document.getElementById("oncetGather");
+			var nextGather=document.getElementById("nextGather");
+			var finaGather=document.getElementById("finaGather");
+			//alert(finaGather);
+			var n;
+			function a(n){
+				video2.src=master[n];
+				video2.load();
+				video2.play();
+				//未调bug
+				play.hidden=true;
+				stop.hidden=false;
+			}
+			firstGather.onclick=function(){
+				n=j;
+				if(n<=0){
+					alert("亲，这已经是第一集了哦！");
+					n=j=0;
+				};
+				a(n)
+				
+			}
+			oncetGather.onclick=function(){
+				n=j--;
+				if(n<=0){
+					alert("亲，这已经是第一集了哦！");
+					n=j=0;
+				}
+				a(n);
+				
+			}
+			nextGather.onclick=function(){
+				n=j++;
+				
+				if(n>=master.length){
+					alert("翻到尾了哦!");
+					n=j=n-1;
+				}
+				a(n);
+				
+		  }
+			finaGather.onclick=function(){
+				n=j=master.length-1;	
+				a(n);
+				
+			}
+		
+			
+			//自选集数
+			var play=document.getElementById("play");
+			var stop=document.getElementById("stop");
+			var num=document.getElementsByClassName("num")
+				//alert(num[0]);
+			  //遍历集数
+			for(var k=0;k<num.length;k++){
+				//alert(k);
+				(function(k){
+				  num[k].onclick=function(){
+					//alert(k);
+					video.src=master[k];
+					video.load();
+					video.play();
+					play.hidden=true;
+					stop.hidden=false;
+				}	
+			})(k)							
+			}
+			
+
+			// for(var k=0;k<master.length;k++){
+			// 	alert(k)
+			// }
+			// num1.onclick=function(){
+			// 	video.src=master[];
+			// }
+		});
+	</script>
+</head>
+<body>
+	<video src="welcome.mp4" id="video">
+		不能正常播放！	
+	</video>
+	
+	<div id="button">
+	  <div>
+		<button id="play"><span class="iconfont">&#xe6af;</span>播放</button>
+		<button id="stop" hidden><span class="iconfont">&#xe6b0;</span>暂停</button>
+		<button id="voice"><span class="iconfont">&#xe617;</span>静音</button>
+		<button id="timeend"><span class="iconfont">&#xe6ae;</span>结束</button>
+		<button id="quickly1"><span class="iconfont">&#xe6af;</span>1.5倍加速</button>
+		<button id="normal"><span class="iconfont">&#xe614;</span>正常倍速</button>
+		<button id="quickly2"><span class="iconfont">&#xe6af;</span>2倍加速</button>
+		<!-- <button id="backtime">回放</button> -->
+		<!-- <button id="fresh"><span class="iconfont">&#xe6af;</span>重新开始</button> -->		
+		<button class="num">第一集</button>
+		 <button class="num">第二集</button>
+		 <button class="num">第三集</button></div>
+	 <!-- <div class="num"> -->
+		 
+	 <!-- </div> -->
+	  <div id="gatuer" style="padding-top:10px;">
+		<button id="firstGather">首集</button>
+		<button id="oncetGather">上一集</button>
+		<button id="nextGather">>下一集</button>
+		<button id="finaGather">尾集</button>
+		<p style="color:white;display: block;float:left;padding-right: 15px;"><span class="iconfont"> &#xe616;</span>播放时间:
+			<span id="currTime"></span>/<span id="totalTime"></span>
+		</p>
+	  </div>	
+	</div>
+</body>
+</html>

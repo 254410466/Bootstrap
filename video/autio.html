@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3.16+18软2+60+付亮</title>
+		<link rel="shortcut icon" href="https://gtms04.alicdn.com/tps/i4/TB1_oz6GVXXXXaFXpXXJDFnIXXX-64-64.ico" type="image/x-icon"/>
+		  <link rel="stylesheet" href="https://g.alicdn.com/thx/cube/1.3.2/cube.min.css">
+		  <link rel="stylesheet" href="incon/demo.css">
+		  <link rel="stylesheet" href="incon/iconfont.css">
+		  <script src="font_1079482_2vjl4rbn36d/iconfont.js"></script>
+		  <!-- jQuery -->
+		  <script src="https://a1.alicdn.com/oss/uploads/2018/12/26/7bfddb60-08e8-11e9-9b04-53e73bb6408b.js"></script>
+		  <!-- 代码高亮 -->
+		  <script src="https://a1.alicdn.com/oss/uploads/2018/12/26/a3f714d0-08e6-11e9-8a15-ebf944d7534c.js"></script>
+		
+		
+		<script>
+				
+				document.onready=function(){
+					
+					var audio=document.getElementById("audio");	
+					var voice=document.getElementById("voice");	
+					// 播放%播放
+					var play=document.getElementById("play");
+					var stop=document.getElementById("stop");
+					play.onclick=function(){
+						//audio.load();
+						audio.play();
+						play.hidden=true;
+						stop.hidden=false;
+					}
+					stop.onclick=function(){
+						audio.pause();
+						play.hidden=false;
+						stop.hidden=true;
+					}
+					//静音
+					var n=0;
+					//alert(voice)		
+					voice.onclick=function(){						
+						n+=1;
+						//alert(num);
+						if(n%2==0){
+							audio.muted=false; 	//取消静音
+							this.style.backgroundColor="#e9e9e9";
+							this.style.color="black"
+						}else{
+							audio.muted=true;
+							this.style.backgroundColor="blue";
+							this.style.color="white"
+						}
+					}
+						//音量
+						
+						//alert(audio.volume);
+					// function setvalue(){						
+					// 		//alert("11");
+					// 	var ran=document.getElementById("ran");
+					// 	audio.volume=ran.value/10;							
+					// 	audio.muted=false;
+					// }
+						
+
+
+						
+						
+					// 播放时间&结束
+					var currTime=document.getElementById("currTime");
+					var totalTime=document.getElementById("totalTime");
+					var timeend=document.getElementById("timeend");
+					audio.ontimeupdate=function(){
+						currTime.innerHTML=audio.currentTime;
+						totalTime.innerHTML=audio.duration;
+					}
+					timeend.onclick=function(){
+						audio.currentTime=audio.duration;
+						audio.load();
+						play.hidden=false;
+						stop.hidden=true;
+						};			
+					//加速&回放
+					var quickly1=document.getElementById("quickly1");
+					var quickly2=document.getElementById("quickly2");
+					var normal=document.getElementById("normal");
+					// var back=document.getElementById("backtime");
+					// //alert(back);
+					// back.onclick=function(){
+					// 	video.defaultPlaybackRate=0.5;
+					// 	//video.load();
+					// }
+					normal.onclick=function(){
+						audio.playbackRate=1;
+					}
+					quickly1.onclick=function(){
+						audio.playbackRate=0.5;
+					}
+					quickly2.onclick=function(){
+						audio.playbackRate=1.5;
+					}
+				
+				//选歌曲
+				var j=0;		
+				var music=["notitle.mp3","Revolution.mp3","sunflower.mp3","Flaming.mp3"]
+				//alert(master.length)
+					//var video2=document.getElementById("video");								
+					var firstGather=document.getElementById("firstGather");			
+					var oncetGather=document.getElementById("oncetGather");
+					var nextGather=document.getElementById("nextGather");
+					var finaGather=document.getElementById("finaGather");
+					//alert(finaGather);
+					var n;
+					function a(n){
+					audio.src=music[n];
+					audio.load();
+					audio.play();
+					//未调bug
+					play.hidden=true;
+					stop.hidden=false;
+				}
+					firstGather.onclick=function(){
+						n=j;
+						if(n<=0){
+							alert("亲，这已经是第一首歌曲了哦！");
+							n=j=0;
+						};
+						a(n)								
+				}
+					oncetGather.onclick=function(){
+						n=j--;
+						if(n<=0){
+							alert("亲，这已经是第一首歌曲了哦！");
+							n=j=0;
+						}
+						a(n);
+				}
+					nextGather.onclick=function(){
+						n=j++;
+						if(n>=music.length){
+							alert("翻到尾了哦!");
+							n=j=n-1;
+						}
+						a(n);
+				}
+					finaGather.onclick=function(){
+						n=j=music.length-1;	
+						a(n);
+				}						
+							//自选集数
+							var play=document.getElementById("play");
+							var stop=document.getElementById("stop");
+							var num=document.getElementsByClassName("num")
+								//alert(num[0]);
+							  //遍历集数
+							for(var k=0;k<num.length;k++){
+								//alert(k);
+								(function(k){
+								  num[k].onclick=function(){
+									//alert(k);
+									audio.src=music[k];
+									audio.load();
+									audio.play();
+									play.hidden=true;
+									stop.hidden=false;
+								}	
+							})(k)							
+							}
+			}
+		</script>
+</head>
+<body>
+	<p style="color:red">当前歌曲:
+	<script>
+		document.write(document.getElementsByTagName("audio").src)
+	</script></p>
+	<audio src="Flaming.mp3" id="audio" controls loop autoplay>
+		播放失败！
+	</audio>
+	
+	<div id="button">
+		<div id="gatuer" style="padding-top:10px;margin-bottom:10px">
+			<button id="firstGather">《 </button>
+			<button id="oncetGather"> < </button>
+			
+			<button id="play" hidden><span class="iconfont">&#xe6af;</span>播放</button>
+			<button id="stop"><span class="iconfont">&#xe6b0;</span>暂停</button>
+			<button id="voice"><span class="iconfont">&#xe617;</span>静音</button>
+			<button id="timeend"><span class="iconfont">&#xe6ae;</span>结束</button>
+			<button id="nextGather"> > </button>
+			<button id="finaGather"> 》</button> 
+		</div>	
+		<form action="#" method="get">
+			<label style="line-height: 10px;font-weight: bolder;">音量</label>
+				<!-- <input type="range" name="ran" onchange="setvalue()" min="1" max="10" value="10" id="ran"/> -->
+				<input id="ran" onchange="changevol();outputs.value=this.value/10" type="range" min=0  max=10 step=1/>
+				 <output name="outputs" onchange="">0.5</output>
+
+		</form>
+			<button id="quickly1"><span class="iconfont">&#xe6af;</span>0.5倍加速</button>
+			<button id="normal"><span class="iconfont">&#xe614;</span>正常倍速</button>
+			<button id="quickly2"><span class="iconfont">&#xe6af;</span>1倍加速</button><br>
+			<!-- <button id="backtime">回放</button> -->
+			<!-- <button id="fresh"><span class="iconfont">&#xe6af;</span>重新开始</button> -->		
+		
+	</div>
+			<button class="num">第一首</button>
+			<button class="num">第二首</button>
+			<button class="num">第三首</button>
+			<button class="num">第四首</button><br />
+		  
+		  <p style="color:black;display: block;float:left;padding-right: 15px;"><span class="iconfont"> &#xe616;</span>播放时间:
+				<span id="currTime"></span>/<span id="totalTime"></span>
+		  </p>
+	
+		<script>
+			function changevol(){
+			       //alert(3);
+			       var ran=document.getElementById("ran");
+			       var audio=document.getElementById("audio");
+				   //alert(objvol.value/10);
+			       audio.volume=ran.value/10.0;
+			    }
+		</script>
+	
+</body>
+</html>

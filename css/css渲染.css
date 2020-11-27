@@ -1,0 +1,215 @@
+.jumbotron{background: url(../images/logo.jpg) no-repeat;
+           width: 100%}
+.jumbotron p.text-left:nth-child(n+2){
+        color: rgb(7, 23, 248);
+        font-family: "Times New Roman",Georgia,Serif;
+        font-size: 1.5em 
+}
+/* 模态框居中 */
+div.modal{
+        margin-top: 15%
+}
+/* div#nav{background-color: #ffffff;
+        position: relative;} */
+div#navscroll li.disabled a{background-color: rgb(123, 123, 194);
+            color: white;
+            border-radius: 20px;}
+div#img img{border-radius: 10px;
+            height: 348.5px;
+            width: 100%;
+            transition: all .7s;
+            -moz-transition: all .7s; /* Firefox 4 */
+            -webkit-transition: all .7s; /* Safari and Chrome */
+            -o-transition: all .7s; /* Opera */}  
+div#img img:hover{
+            transform: scale(1.05, 1.05);
+            box-shadow: -9px 6px 10px #888888;
+            border: 2px #7568e9 solid;
+            }         
+div#navscroll{background-color: #ffffff}
+/* div.carousel-inner>.item>img{width: 90%; height: 700px; margin: auto} */
+div.container-fluid p.on{box-shadow: rgb(199, 212, 212) -5px 5px 5px;}
+.fiex{  position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%}
+i.icon{color: rgb(255, 0, 106);
+        box-shadow: 3px 3px -10px orange}
+#footer{background-color: #e6e0e0;
+        text-align: center
+        }
+
+#footer a{
+          color: #7a7676;
+         
+        }
+#footer a:hover{
+          color: #2034eb
+        }
+div#hot div.row{
+        margin-top: 80px;
+        display: -webkit-flex; /* Safari */
+        -webkit-justify-content: space-around;
+        display: flex;
+        justify-content: space-around;
+        }
+div#hot div.beauty div.row div{
+        background-color: #fff;
+        box-sizing: border-box;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+        transition: all 1s;
+        }
+div#hot div.beauty div.row a{ 
+        color: black;
+        text-decoration: none;
+        }
+div#hot div.beauty div.row a h4.title{font-weight: bold;
+        }
+div#hot div.beauty div.row img{
+        margin-top: -48px;
+        height: 80px;
+        margin-bottom: 24px
+        }
+/* div#hot div.beauty div.row div div.gradient{
+        height: 102%;
+        width: 102%;
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
+        background-image: linear-gradient(135deg, red blue cyan green);
+        background-size: 100%;
+        animation: gradient 2s infinite;
+        z-index: -1;
+}
+ @keyframes gradient{
+        0%{
+                background-position: 0 50%
+        }
+        50%{
+                background-position: 100% 50%            
+        }
+        100%{
+                background-position: 0 50%          
+        }
+} */
+div.gradient{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -1;
+}
+div#hot div.beauty div.row div.col:hover{
+        transform: translateY(-45px);
+}
+div#hot div.beauty div.row div.col span.caton{
+        position: absolute;
+        display: block;
+}
+
+/* 第一个 */
+div#hot div.beauty div.row div.col span.caton:nth-child(1){
+        left: 0;
+        top: 0;
+        transform: translateY(-100%);
+        background: #03a9f4;
+}
+div#hot div.beauty div.row div.col:hover span.caton:nth-child(1){
+        height: 100%;
+        width: 1%;
+        transition: .75s;
+        transform: translateY(0%);
+}
+/* 第二个 */
+div#hot div.beauty div.row div.col span.caton:nth-child(2){
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        background: #e73443;
+}
+div#hot div.beauty div.row div.col:hover span.caton:nth-child(2){
+        height: 1.5%;
+        width: 100%;
+        transition: .75s;
+        transition-delay: .25s;
+        transform: translateX(0);
+        
+}
+/* 第三个 */
+div#hot div.beauty div.row div.col span.caton:nth-child(3){
+        right: 0;
+        top: 0;
+        transform: translateY(100%);
+        background: rgb(228, 151, 7);
+}
+div#hot div.beauty div.row div.col:hover span.caton:nth-child(3){
+        height: 100%;
+        width: 1.25%;
+        transition: .75s;
+        transform: translateY(0);
+        
+}
+/* 第四个 */
+div#hot div.beauty div.row div.col span.caton:nth-child(4){
+        right: 0;
+        bottom: 0;
+        transform: translateX(100%);
+        background: rgb(6, 253, 101)
+}
+div#hot div.beauty div.row div.col:hover span.caton:nth-child(4){
+        height: 1.5%;
+        width: 100%;
+        transition: .75s;
+        transition-delay: .25s;
+        transform: translateX(0);
+        
+}
+/* 遮罩层 */
+div#hot div.beauty div.row div.col span.mask{
+        color: orange
+        }
+div#hot div.beauty div.row div.col span.mask .line{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        }
+div#hot div.beauty div.row div.col span.mask:hover{
+        color: #03a9f4
+        }
+
+a.carousel-control{
+        height: 80px;
+        width: 80px;
+        margin-top: 100px;
+        transform: tanslate( -50%, -50%);
+        border-radius: 50%;
+        background: rgb(110, 110, 231);
+}
+a.left{
+        margin-left: -100px;
+}
+a.right{
+        margin-right: -100px;
+}
+a.carousel-control span{
+        z-index: 9;
+        color: rgb(110, 110, 231);
+}
+a.carousel-control div{
+        position: absolute;
+        height: 80%;
+        width: 80%;
+        top: 10%;
+        left: 10%;
+        background: #fff;
+        border-radius: 50%;
+}
